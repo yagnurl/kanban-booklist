@@ -1,0 +1,11 @@
+.kanbanContainer {
+  display: flex;
+}
+
+.kanbanColumn {
+  width: 280px;
+  height: 438px;
+  margin: 30px;
+  border: 1px solid purple !important;
+  border-radius: 5px;
+}
