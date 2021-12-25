@@ -1,0 +1,52 @@
+// Colors
+$backgroundColor: #d2d7e0;
+$textColor: #707090;
+$lightTextColor: #aaaaaa;
+$buttonColor: #82c786;
+$lightBackgroundColor: #f4f4f4;
+$black: #373a3b;
+
+// Max breakpoints for responsive approach
+$mobile: 640px;
+$tablet: 1007px;
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+//Font size
+.fs-10 {
+  font-size: 10px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.fs-28 {
+  font-size: 28px;
+}
+.fs-30 {
+  font-size: 30px;
+}
