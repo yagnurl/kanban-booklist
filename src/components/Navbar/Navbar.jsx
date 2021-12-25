@@ -1,10 +1,11 @@
 import React from 'react'
-
+import Logo from '../../img/logo.svg'
+import './style.scss'
 export default function Navbar() {
     return (
          <header>
            <div className="logo">
-               LOGO
+               <img src={Logo} alt="" />
            </div>
        </header>
     )
