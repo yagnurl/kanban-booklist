@@ -3,30 +3,28 @@ import ColumnItem from '../ColumnItem/ColumnItem'
 import './style.scss'
 export default function KanbanColumn(props) {
 
-    let groupByYear = props.books.reduce((r, a) => {
-    r[a.first_publish_year] = r[a.first_publish_year] || [];
-    r[a.first_publish_year].push(a);
-    return r;
-  }, Object.create(null));
+    //`props.books` is an array of objects, `key` is the key to group by
+    let groupByYear = props.books.reduce((storage, item) => { 
+        
+    // set `storage` for the instance
+    storage[item.first_publish_year] = storage[item.first_publish_year] || []; 
 
-    // let groupByYear = props.books.reduce((storage,item) => {
-    //                             // `props.books` is an array of objects, `key` is the key (or property accessor) to group by
-    //     var group = item[first_publish_year]; // get the first instance of the key by which we're grouping                            
-    //     storage[group] = storage[group] || [];         // set `storage` for this instance of group to the outer scope (if not empty) or initialize it
-    //     storage[group].push(item);                       // add this item to its group within `storage`
-    //     return storage;    // return the updated storage 
-    // }, {})             // {} is the initial value of the storage                                   
-                                      
-                                                  
+    // add this item to its group within `storage`
+    storage[item.first_publish_year].push(item); 
 
+    // return the updated storage 
+    return storage; 
 
+  }, Object.create(null)); //  initial value of the storage    
+
+  
     // convert groupByYear object into key's array to make iterable
     const keys = Object.keys(groupByYear);
     let values = []
 
     // iterate the keys to determine column id's (publish year)
-    Object.keys(groupByYear).forEach((prop) => {
-        values.push(groupByYear[prop])
+    Object.keys(groupByYear).forEach((key) => {
+        values.push(groupByYear[key])
         console.log("values", values);
     })
     
@@ -37,7 +35,7 @@ export default function KanbanColumn(props) {
             <div className="kanbanColumn" id={key}>
                 <p>{key}</p>
 
-                {values.map((item) =>
+                {values.map((item) => 
                     item.map((element) =>
                     key == element.first_publish_year ? (
                         <ColumnItem item={item} props={element} />
