@@ -1,17 +1,19 @@
 import React from 'react'
 import './style.scss'
-export default function ColumnItem() {
+export default function ColumnItem(props) {
+
     return (
+
         <div className="columnItem">
-            <h5>Title</h5>
+            <h5>{props.props.title_suggest}</h5>
 
             <div className="tags">
-                <button>123</button>
-                <span>1943</span>
+                <button>{props.props.edition_count}</button>
+                <span>{props.props.first_publish_year}</span>
             </div>
 
             <div className="reader">
-                <span>450 pages</span>
+                <span>{props.props.number_of_pages_median}</span>
             </div>
         </div>
     )
