@@ -1,3 +1,62 @@
+@import "../../global.scss";
+
 .columnItem {
-  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  color: $textColor;
+  background-color: $lightBackgroundColor;
+  padding: 1em;
+  margin: 1em 0.5em;
+  border-radius: 5px;
+
+  .title {
+    display: flex;
+  }
+
+  .tags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    button {
+      padding: 0.5em 1em;
+      background-color: $buttonColor;
+      border: none;
+      outline: none;
+      border-radius: 3px;
+      color: white;
+      cursor: pointer;
+    }
+
+    span {
+      color: $lightTextColor;
+    }
+  }
+
+  .reader {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2em;
+    div {
+      display: flex;
+      align-items: center;
+
+      color: $lightTextColor;
+
+      img {
+        margin: 0 0.5em;
+      }
+    }
+  }
+
+  .icon {
+    cursor: pointer;
+  }
 }
+
+// .Collapsible__trigger {
+//   word-wrap: break-word;
+// }
+// .Collapsible {
+//   word-wrap: break-word;
+// }

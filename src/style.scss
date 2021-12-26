@@ -1,0 +1,48 @@
+@import "./global.scss";
+
+.topSection {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.boardTitle {
+  margin-left: 1em;
+  font-weight: normal;
+}
+
+.searchBar {
+  span {
+    color: #1e272e;
+    margin-left: 1em;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid #d8d8d8;
+    outline: none;
+    margin-left: 1em;
+  }
+
+  button {
+    height: 22px;
+    width: 67px;
+    left: 0px;
+    top: 0px;
+    border-radius: 3px;
+    background-color: $black;
+    color: white;
+    margin-left: 1em;
+    cursor: pointer;
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin: 0.5em;
+  }
+}

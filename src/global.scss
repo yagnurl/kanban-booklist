@@ -22,9 +22,19 @@ $tablet: 1007px;
   }
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 //Font size
 .fs-10 {
   font-size: 10px;
+}
+.fs-11 {
+  font-size: 11px;
 }
 .fs-12 {
   font-size: 12px;

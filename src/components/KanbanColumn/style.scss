@@ -1,11 +1,26 @@
+@import "../../global.scss";
+
 .kanbanContainer {
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .kanbanColumn {
-  width: 280px;
-  height: 438px;
+  flex: 0 0 auto;
+  color: $textColor;
+  background-color: $backgroundColor;
+  width: 280px !important;
+  min-height: 500px !important;
+  max-height: calc(100vh - 200px);
   margin: 30px;
-  border: 1px solid purple !important;
   border-radius: 5px;
+  border-top: 5px solid #f5f433;
+  box-shadow: 0px 0px 10px #d2d7e0;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  p {
+    padding: 0.5em;
+  }
 }
