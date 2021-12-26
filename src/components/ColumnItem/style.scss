@@ -9,15 +9,12 @@
   margin: 1em 0.5em;
   border-radius: 5px;
 
-  .title {
-    display: flex;
-  }
-
   .tags {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1em;
+
     button {
       padding: 0.5em 1em;
       background-color: $buttonColor;
@@ -37,10 +34,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 1.2em;
+
     div {
       display: flex;
       align-items: center;
-
       color: $lightTextColor;
 
       img {
@@ -54,9 +51,36 @@
   }
 }
 
-// .Collapsible__trigger {
-//   word-wrap: break-word;
-// }
-// .Collapsible {
-//   word-wrap: break-word;
-// }
+//The link which when clicked opens the collapsable area
+.Collapsible__trigger {
+  position: relative;
+
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1.5em;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    display: block;
+    transition: transform 300ms;
+    transform: rotateZ(-90deg);
+    background: url(../../img/icons/chevron-down.svg) no-repeat right center;
+  }
+
+  &.is-open {
+    &:after {
+      transform: rotateZ(0deg);
+    }
+  }
+
+  &.is-disabled {
+    opacity: 0.5;
+    background-color: grey;
+  }
+}
