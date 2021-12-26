@@ -4,9 +4,9 @@ Book List is a kanban board to list the books of a certain author; it distribute
 
 ### Try live
 
-[DEMO](http://vercel.com "DEMO")
+[DEMO](https://kanban-booklist.vercel.app "DEMO")
 
-[![](https://github.com/yagnurl/kanban-booklistsrc\img\overview.png)](https://github.com/yagnurl/kanban-booklistsrc\img\overview.png)
+[![](https://github.com/yagnurl/kanban-booklist/blob/master/src/img/overview.png?raw=true)](https://github.com/yagnurl/kanban-booklist/blob/master/src/img/overview.png?raw=true)
 
 ### Installation and Setup Instructions
 
